@@ -26,4 +26,4 @@ while months_left > 0:
   savings += money_left_per_month
 
 #How much you will have in debt-free savings after chosen time-period
-print(f"After 120 months you'll have {savings} in savings!")
+print(f"After {months} months you'll have {savings} in savings!")
