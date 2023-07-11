@@ -1,0 +1,29 @@
+income_per_month = int(input("Average monthly net-income: "))
+bills_per_month = int(input("Average bills per month: "))
+food_per_month = int(input("Average food costs per month: "))
+
+money_left_per_month = income_per_month - bills_per_month - food_per_month
+
+print(f"You have {money_left_per_month}€ after bills and food")
+
+#If you have debt, add it here
+total_debts = 10000
+
+#Adjust months according to your prefered timeline
+months = 60
+
+#Leave to 0 if you have debt and don't have savings
+savings = 0
+
+for i in range(0, 121):
+  while total_debts > 0:
+    months -= 1
+    total_debts -= money_left_per_month
+    months_left = months - i
+
+while months_left > 0:
+  months_left -= 1
+  savings += money_left_per_month
+
+#How much you will have in debt-free savings after chosen time-period
+print(f"After 120 months you'll have {savings} in savings!")
